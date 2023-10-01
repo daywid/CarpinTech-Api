@@ -1,0 +1,146 @@
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\appsettings.Development.json
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\appsettings.json
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\MarcenariaApi.exe
+c:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\MarcenariaApi.deps.json
+c:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\MarcenariaApi.runtimeconfig.json
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\MarcenariaApi.dll
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\MarcenariaApi.pdb
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\Humanizer.dll
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\Microsoft.Data.Sqlite.dll
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Sqlite.dll
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\dotnet-ef.dll
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\SQLitePCLRaw.batteries_v2.dll
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\SQLitePCLRaw.core.dll
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\System.CodeDom.dll
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\runtimes\alpine-arm\native\libe_sqlite3.so
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\runtimes\alpine-arm64\native\libe_sqlite3.so
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\runtimes\alpine-x64\native\libe_sqlite3.so
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\runtimes\browser-wasm\nativeassets\net7.0\e_sqlite3.a
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\runtimes\linux-arm\native\libe_sqlite3.so
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\runtimes\linux-arm64\native\libe_sqlite3.so
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\runtimes\linux-armel\native\libe_sqlite3.so
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\runtimes\linux-mips64\native\libe_sqlite3.so
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\runtimes\linux-musl-arm\native\libe_sqlite3.so
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\runtimes\linux-musl-arm64\native\libe_sqlite3.so
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\runtimes\linux-musl-x64\native\libe_sqlite3.so
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\runtimes\linux-ppc64le\native\libe_sqlite3.so
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\runtimes\linux-s390x\native\libe_sqlite3.so
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\runtimes\linux-x64\native\libe_sqlite3.so
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\runtimes\linux-x86\native\libe_sqlite3.so
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\runtimes\maccatalyst-arm64\native\libe_sqlite3.dylib
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\runtimes\maccatalyst-x64\native\libe_sqlite3.dylib
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\runtimes\osx-arm64\native\libe_sqlite3.dylib
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\runtimes\osx-x64\native\libe_sqlite3.dylib
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\runtimes\win-arm\native\e_sqlite3.dll
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\runtimes\win-arm64\native\e_sqlite3.dll
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\runtimes\win-x64\native\e_sqlite3.dll
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\runtimes\win-x86\native\e_sqlite3.dll
+C:\Github\MarcenariaApiT\MarcenariaApi\obj\Debug\net7.0\MarcenariaApi.csproj.AssemblyReference.cache
+C:\Github\MarcenariaApiT\MarcenariaApi\obj\Debug\net7.0\MarcenariaApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Github\MarcenariaApiT\MarcenariaApi\obj\Debug\net7.0\MarcenariaApi.AssemblyInfoInputs.cache
+C:\Github\MarcenariaApiT\MarcenariaApi\obj\Debug\net7.0\MarcenariaApi.AssemblyInfo.cs
+C:\Github\MarcenariaApiT\MarcenariaApi\obj\Debug\net7.0\MarcenariaApi.csproj.CoreCompileInputs.cache
+C:\Github\MarcenariaApiT\MarcenariaApi\obj\Debug\net7.0\MarcenariaApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Github\MarcenariaApiT\MarcenariaApi\obj\Debug\net7.0\MarcenariaApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Github\MarcenariaApiT\MarcenariaApi\obj\Debug\net7.0\staticwebassets\msbuild.MarcenariaApi.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Github\MarcenariaApiT\MarcenariaApi\obj\Debug\net7.0\staticwebassets\msbuild.build.MarcenariaApi.props
+C:\Github\MarcenariaApiT\MarcenariaApi\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.MarcenariaApi.props
+C:\Github\MarcenariaApiT\MarcenariaApi\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.MarcenariaApi.props
+C:\Github\MarcenariaApiT\MarcenariaApi\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Github\MarcenariaApiT\MarcenariaApi\obj\Debug\net7.0\staticwebassets.build.json
+C:\Github\MarcenariaApiT\MarcenariaApi\obj\Debug\net7.0\staticwebassets.development.json
+C:\Github\MarcenariaApiT\MarcenariaApi\obj\Debug\net7.0\scopedcss\bundle\MarcenariaApi.styles.css
+c:\Github\MarcenariaApiT\MarcenariaApi\obj\Debug\net7.0\MarcenariaApi.csproj.CopyComplete
+C:\Github\MarcenariaApiT\MarcenariaApi\obj\Debug\net7.0\MarcenariaApi.dll
+C:\Github\MarcenariaApiT\MarcenariaApi\obj\Debug\net7.0\refint\MarcenariaApi.dll
+C:\Github\MarcenariaApiT\MarcenariaApi\obj\Debug\net7.0\MarcenariaApi.pdb
+c:\Github\MarcenariaApiT\MarcenariaApi\obj\Debug\net7.0\MarcenariaApi.genruntimeconfig.cache
+c:\Github\MarcenariaApiT\MarcenariaApi\obj\Debug\net7.0\ref\MarcenariaApi.dll
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\Npgsql.dll
+C:\Github\MarcenariaApiT\MarcenariaApi\bin\Debug\net7.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\appsettings.json
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\MarcenariaApi.exe
+c:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\MarcenariaApi.deps.json
+c:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\MarcenariaApi.runtimeconfig.json
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\MarcenariaApi.dll
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\MarcenariaApi.pdb
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\Humanizer.dll
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\Microsoft.Data.Sqlite.dll
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Sqlite.dll
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\dotnet-ef.dll
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\Npgsql.dll
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\SQLitePCLRaw.batteries_v2.dll
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\SQLitePCLRaw.core.dll
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\runtimes\alpine-arm\native\libe_sqlite3.so
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\runtimes\alpine-arm64\native\libe_sqlite3.so
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\runtimes\alpine-x64\native\libe_sqlite3.so
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\runtimes\browser-wasm\nativeassets\net7.0\e_sqlite3.a
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\runtimes\linux-arm\native\libe_sqlite3.so
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\runtimes\linux-arm64\native\libe_sqlite3.so
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\runtimes\linux-armel\native\libe_sqlite3.so
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\runtimes\linux-mips64\native\libe_sqlite3.so
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\runtimes\linux-musl-arm\native\libe_sqlite3.so
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\runtimes\linux-musl-arm64\native\libe_sqlite3.so
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\runtimes\linux-musl-x64\native\libe_sqlite3.so
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\runtimes\linux-ppc64le\native\libe_sqlite3.so
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\runtimes\linux-s390x\native\libe_sqlite3.so
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\runtimes\linux-x64\native\libe_sqlite3.so
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\runtimes\linux-x86\native\libe_sqlite3.so
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\runtimes\maccatalyst-arm64\native\libe_sqlite3.dylib
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\runtimes\maccatalyst-x64\native\libe_sqlite3.dylib
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\runtimes\osx-arm64\native\libe_sqlite3.dylib
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\runtimes\osx-x64\native\libe_sqlite3.dylib
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\runtimes\win-arm\native\e_sqlite3.dll
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\runtimes\win-arm64\native\e_sqlite3.dll
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\runtimes\win-x64\native\e_sqlite3.dll
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\bin\Debug\net7.0\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\obj\Debug\net7.0\MarcenariaApi.csproj.AssemblyReference.cache
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\obj\Debug\net7.0\MarcenariaApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\obj\Debug\net7.0\MarcenariaApi.AssemblyInfoInputs.cache
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\obj\Debug\net7.0\MarcenariaApi.AssemblyInfo.cs
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\obj\Debug\net7.0\MarcenariaApi.csproj.CoreCompileInputs.cache
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\obj\Debug\net7.0\MarcenariaApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\obj\Debug\net7.0\MarcenariaApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\obj\Debug\net7.0\staticwebassets\msbuild.MarcenariaApi.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\obj\Debug\net7.0\staticwebassets\msbuild.build.MarcenariaApi.props
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.MarcenariaApi.props
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.MarcenariaApi.props
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\obj\Debug\net7.0\scopedcss\bundle\MarcenariaApi.styles.css
+c:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\obj\Debug\net7.0\MarcenariaApi.csproj.CopyComplete
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\obj\Debug\net7.0\MarcenariaApi.dll
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\obj\Debug\net7.0\refint\MarcenariaApi.dll
+C:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\obj\Debug\net7.0\MarcenariaApi.pdb
+c:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\obj\Debug\net7.0\MarcenariaApi.genruntimeconfig.cache
+c:\Users\daywi\OneDrive\Área de Trabalho\MarcenariaAPI-main\MarcenariaApi\obj\Debug\net7.0\ref\MarcenariaApi.dll
