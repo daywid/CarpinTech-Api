@@ -59,30 +59,27 @@ Aqui está um diagrama de classes UML que representa a estrutura das classes do 
 
 ## Relatório de Atividades com ajuda do ChatGPT
 
-### Atividade 1: Início do Projeto
 
-- Definição dos requisitos iniciais.
-
-### Atividade 2: Desenvolvimento das Classes de Modelo
+### Atividade 1: Desenvolvimento das Classes de Modelo
 
 - Ajuda na criação inicial das classes models.
 - Adição das propriedades e relacionamentos necessários.
 
-### Atividade 3: Desenvolvimento dos Controllers
+### Atividade 2: Desenvolvimento dos Controllers
 
 - Criação inicial dos controllers.
 - Implementação dos métodos CRUD para cada entidade.
 
-### Atividade 4: Integração com o Banco de Dados
+### Atividade 3: Integração com o Banco de Dados
 
 - Ajudou na Configuração do Entity Framework Core para interagir com o SQLite (rota para interação no DbContext).
 
-### Atividade 5: Documentação
+### Atividade 4: Documentação
 
 - Ajudou na listagem de informações sobre as principais funcionalidades.
 - Ao ser enviado um contexto sobre a Api e suas classes, o ChatGPT fez uma listagem sobre as mesmas. 
 
-### Atividade 6: Depuração
+### Atividade 5: Depuração
 
 - Ajudou na correção de bugs que a equipe encontrava durante o desenvolvimento, dando dicas de como solucionar o problema.
 
