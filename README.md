@@ -55,7 +55,7 @@ Aqui estão as principais funcionalidades da MarcenariaAPI:
 
 Aqui está um diagrama de classes UML que representa a estrutura das classes do projeto:
 
-![](CarpinTech.png)
+![](CarpinTech.jpg)
 
 ## Relatório de Atividades com ajuda do ChatGPT
 
