@@ -1,5 +1,8 @@
 ### Documentação da MarcenariaAPI
 
+
+
+
 ## Resumo do Projeto
 
 A MarcenariaAPI é uma aplicação de gerenciamento para uma marcenaria fictícia chamada Carpintech. Ela oferece funcionalidades para controlar funcionários, agendas, fornecedores, clientes, e materiais utilizados nos projetos da marcenaria. O objetivo é melhorar a eficiência operacional, aumentar a visibilidade sobre os projetos e manter registros financeiros precisos.
