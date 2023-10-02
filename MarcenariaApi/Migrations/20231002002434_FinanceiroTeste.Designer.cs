@@ -3,6 +3,7 @@ using System;
 using MarcenariaApi.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MarcenariaApi.Migrations
 {
     [DbContext(typeof(MarcenariaDbContext))]
-    partial class MarcenariaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231002002434_FinanceiroTeste")]
+    partial class FinanceiroTeste
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.11");
@@ -124,35 +127,6 @@ namespace MarcenariaApi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Funcionario");
-                });
-
-            modelBuilder.Entity("MarcenariaApi.Models.Relatorio", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Conteudo")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("DataCriacao")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("FuncionarioId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Titulo")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Relatorios");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RxLFr0AwKmhh3WKDM4c9C2yEVvQCjOlzPA2blu7zGBUsQN0MtcQ3OnT5QWD1pnSFVGYV5grOvQ7iKhxuPAwr7A==",
+  "dgSpecHash": "fI+fd/oq00fq76o2NMDlXHvduVgJgvPNUhXIBz7w+IHw89AzVKkBzYCnOh8T6j4xjzoM+mYEZC7+pugjr1YUog==",
   "success": true,
-  "projectFilePath": "c:\\Users\\daywi\\OneDrive\\Área de Trabalho\\MarcenariaAPI-main\\MarcenariaApi\\MarcenariaApi.csproj",
+  "projectFilePath": "c:\\Users\\daywi\\OneDrive\\Documentos\\GitHub\\CarpinTech-Api\\MarcenariaApi\\MarcenariaApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\daywi\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\daywi\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.11\\microsoft.aspnetcore.openapi.7.0.11.nupkg.sha512",

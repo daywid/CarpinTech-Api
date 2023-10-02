@@ -6082,11 +6082,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\daywi\\OneDrive\\Área de Trabalho\\MarcenariaAPI-main\\MarcenariaApi\\MarcenariaApi.csproj",
+      "projectUniqueName": "c:\\Users\\daywi\\OneDrive\\Documentos\\GitHub\\CarpinTech-Api\\MarcenariaApi\\MarcenariaApi.csproj",
       "projectName": "MarcenariaApi",
-      "projectPath": "c:\\Users\\daywi\\OneDrive\\Área de Trabalho\\MarcenariaAPI-main\\MarcenariaApi\\MarcenariaApi.csproj",
+      "projectPath": "c:\\Users\\daywi\\OneDrive\\Documentos\\GitHub\\CarpinTech-Api\\MarcenariaApi\\MarcenariaApi.csproj",
       "packagesPath": "C:\\Users\\daywi\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\daywi\\OneDrive\\Área de Trabalho\\MarcenariaAPI-main\\MarcenariaApi\\obj\\",
+      "outputPath": "c:\\Users\\daywi\\OneDrive\\Documentos\\GitHub\\CarpinTech-Api\\MarcenariaApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\daywi\\AppData\\Roaming\\NuGet\\NuGet.Config"
