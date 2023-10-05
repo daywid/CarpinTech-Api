@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MarcenariaApi.Migrations
 {
     [DbContext(typeof(MarcenariaDbContext))]
-    [Migration("20231001225137_FornecedorNew")]
-    partial class FornecedorNew
+    [Migration("20231005190236_FuncionarioUpdate")]
+    partial class FuncionarioUpdate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -41,6 +41,49 @@ namespace MarcenariaApi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Agendas");
+                });
+
+            modelBuilder.Entity("MarcenariaApi.Models.Cliente", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Endereco")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Nome")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Telefone")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Clientes");
+                });
+
+            modelBuilder.Entity("MarcenariaApi.Models.Financeiro", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<decimal>("CustosMateriais")
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal>("DespesasOperacionais")
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal>("PagamentosClientes")
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal>("SalariosFuncionarios")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Financeiros");
                 });
 
             modelBuilder.Entity("MarcenariaApi.Models.Fornecedor", b =>
@@ -83,7 +126,36 @@ namespace MarcenariaApi.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Funcionario");
+                    b.ToTable("Funcionarios");
+                });
+
+            modelBuilder.Entity("MarcenariaApi.Models.Relatorio", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Conteudo")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("DataCriacao")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("FuncionarioId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Titulo")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Relatorios");
                 });
 #pragma warning restore 612, 618
         }

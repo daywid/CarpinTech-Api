@@ -123,7 +123,7 @@ namespace MarcenariaApi.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Funcionario");
+                    b.ToTable("Funcionarios");
                 });
 
             modelBuilder.Entity("MarcenariaApi.Models.Relatorio", b =>

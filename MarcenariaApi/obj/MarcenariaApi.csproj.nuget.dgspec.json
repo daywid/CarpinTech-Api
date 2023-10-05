@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\daywi\\OneDrive\\Documentos\\GitHub\\CarpinTech-Api\\MarcenariaApi\\MarcenariaApi.csproj": {}
+    "C:\\Users\\daywi\\OneDrive\\Documentos\\GitHub\\CarpinTech-Api\\MarcenariaApi\\MarcenariaApi.csproj": {}
   },
   "projects": {
-    "c:\\Users\\daywi\\OneDrive\\Documentos\\GitHub\\CarpinTech-Api\\MarcenariaApi\\MarcenariaApi.csproj": {
+    "C:\\Users\\daywi\\OneDrive\\Documentos\\GitHub\\CarpinTech-Api\\MarcenariaApi\\MarcenariaApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\daywi\\OneDrive\\Documentos\\GitHub\\CarpinTech-Api\\MarcenariaApi\\MarcenariaApi.csproj",
+        "projectUniqueName": "C:\\Users\\daywi\\OneDrive\\Documentos\\GitHub\\CarpinTech-Api\\MarcenariaApi\\MarcenariaApi.csproj",
         "projectName": "MarcenariaApi",
-        "projectPath": "c:\\Users\\daywi\\OneDrive\\Documentos\\GitHub\\CarpinTech-Api\\MarcenariaApi\\MarcenariaApi.csproj",
+        "projectPath": "C:\\Users\\daywi\\OneDrive\\Documentos\\GitHub\\CarpinTech-Api\\MarcenariaApi\\MarcenariaApi.csproj",
         "packagesPath": "C:\\Users\\daywi\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\daywi\\OneDrive\\Documentos\\GitHub\\CarpinTech-Api\\MarcenariaApi\\obj\\",
+        "outputPath": "C:\\Users\\daywi\\OneDrive\\Documentos\\GitHub\\CarpinTech-Api\\MarcenariaApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\daywi\\AppData\\Roaming\\NuGet\\NuGet.Config"
