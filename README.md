@@ -58,7 +58,7 @@ Aqui estão as principais funcionalidades da MarcenariaAPI:
    - Cadastro de projetos com informações como nome, descrição, valor, status, etc.
    - Vínculo de tarefas a projetos.
    - Controle de datas de cadastro, prazo e finalização.
-   - 
+     
 ## Diagrama de Classes UML
 
 Aqui está um diagrama de classes UML que representa a estrutura das classes do projeto:
