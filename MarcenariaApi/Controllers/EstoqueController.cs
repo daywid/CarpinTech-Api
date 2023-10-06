@@ -48,16 +48,26 @@ namespace MarcenariaApi.Controllers
         }
 
         [HttpPut()]
-        [Route("atualizar")]
-        public async Task<ActionResult> Alterar(Estoque estoque)
+        [Route("atualizar/{id}")]
+        public async Task<ActionResult> Alterar(int id, Estoque estoque)
         {
-            if (_dbContext is null) return NotFound();
-            if (_dbContext.Estoques is null) return NotFound();
-            var estoqueTemp = await _dbContext.Estoques.FindAsync(estoque.id);
-            if (estoqueTemp is null) return NotFound();
-            _dbContext.Estoques.Update(estoque);
-            await _dbContext.SaveChangesAsync();
-            return Ok();
+            _dbContext.Entry(estoque).State = EntityState.Modified;
+
+            try
+            {
+                await _dbContext.SaveChangesAsync();
+                return Ok();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!EstoqueExists(id))
+                {
+                    return NotFound();
+                }
+                throw;
+            }
+
+            return NoContent();
         }
 
         [HttpDelete()]
@@ -71,6 +81,11 @@ namespace MarcenariaApi.Controllers
             _dbContext.Remove(estoqueTemp);
             await _dbContext.SaveChangesAsync();
             return Ok();
+        }
+
+        private bool EstoqueExists(int id)
+        {
+            return _dbContext.Estoques.Any(e => e.id == id);
         }
     }
 }

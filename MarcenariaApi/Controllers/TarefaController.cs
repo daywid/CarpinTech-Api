@@ -52,16 +52,26 @@ namespace MarcenariaApi.Controllers
         }
 
         [HttpPut()]
-        [Route("atualizar")]
-        public async Task<ActionResult> Alterar(Tarefa tarefa)
+        [Route("atualizar/{id}")]
+        public async Task<ActionResult> Alterar(int id, Tarefa tarefa)
         {
-            if (_dbContext is null) return NotFound();
-            if (_dbContext.Tarefas is null) return NotFound();
-            var tarefaTemp = await _dbContext.Tarefas.FindAsync(tarefa.id);
-            if (tarefaTemp is null) return NotFound();
-            _dbContext.Tarefas.Update(tarefa);
-            await _dbContext.SaveChangesAsync();
-            return Ok();
+            _dbContext.Entry(tarefa).State = EntityState.Modified;
+
+            try
+            {
+                await _dbContext.SaveChangesAsync();
+                return Ok();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!TarefaExists(id))
+                {
+                    return NotFound();
+                }
+                throw;
+            }
+
+            return NoContent();
         }
 
         [HttpDelete()]
@@ -75,6 +85,11 @@ namespace MarcenariaApi.Controllers
             _dbContext.Remove(tarefaTemp);
             await _dbContext.SaveChangesAsync();
             return Ok();
+        }
+
+        private bool TarefaExists(int id)
+        {
+            return _dbContext.Tarefas.Any(e => e.id == id);
         }
     }
 
