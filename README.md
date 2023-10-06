@@ -54,6 +54,11 @@ Aqui estão as principais funcionalidades da MarcenariaAPI:
    - Registro de transações financeiras, incluindo custos de material e salários de funcionários.
    - Controle de pagamentos recebidos de clientes e despesas operacionais.
 
+10. **Projeto**:
+   - Cadastro de projetos com informações como nome, descrição, valor, status, etc.
+   - Vínculo de tarefas a projetos.
+   - Controle de datas de cadastro, prazo e finalização.
+   - 
 ## Diagrama de Classes UML
 
 Aqui está um diagrama de classes UML que representa a estrutura das classes do projeto:
