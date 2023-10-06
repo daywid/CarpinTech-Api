@@ -56,16 +56,30 @@ namespace MarcenariaApi.Controllers
         }
 
         [HttpPut()]
-        [Route("atualizar")]
-        public async Task<ActionResult> Alterar(Material material)
+        [Route("atualizar/{id}")]
+        public async Task<ActionResult> Alterar(int id,  Material material)
         {
-            if (_dbContext is null) return NotFound();
-            if (_dbContext.Materiais is null) return NotFound();
-            var materialTemp = await _dbContext.Materiais.FindAsync(material.id);
-            if (materialTemp is null) return NotFound();
-            _dbContext.Materiais.Update(material);
-            await _dbContext.SaveChangesAsync();
-            return Ok();
+
+            _dbContext.Entry(material).State = EntityState.Modified;
+
+            try
+            {
+                await _dbContext.SaveChangesAsync();
+                return Ok();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!MaterialExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
         }
 
         [HttpDelete()]
@@ -79,6 +93,11 @@ namespace MarcenariaApi.Controllers
             _dbContext.Remove(materialTemp);
             await _dbContext.SaveChangesAsync();
             return Ok();
+        }
+
+        private bool MaterialExists(int id)
+        {
+            return _dbContext.Materiais.Any(e => e.id == id);
         }
     }
 }

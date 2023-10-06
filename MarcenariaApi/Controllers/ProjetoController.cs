@@ -47,16 +47,25 @@ namespace MarcenariaApi.Controllers
         }
 
         [HttpPut()]
-        [Route("atualizar")]
-        public async Task<ActionResult> Alterar(Projeto projeto)
+        [Route("atualizar/{id}")]
+        public async Task<ActionResult> Alterar(int id,  Projeto projeto)
         {
-            if (_dbContext is null) return NotFound();
-            if (_dbContext.Projetos is null) return NotFound();
-            var projetoTemp = await _dbContext.Projetos.FindAsync(projeto.id);
-            if (projetoTemp is null) return NotFound();
-            _dbContext.Projetos.Update(projeto);
-            await _dbContext.SaveChangesAsync();
-            return Ok();
+            _dbContext.Entry(projeto).State = EntityState.Modified;
+            try
+            {
+                await _dbContext.SaveChangesAsync();
+                return Ok();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!ProjetoExists(id))
+                {
+                    return NotFound();
+                }
+                throw;
+            }
+
+            return NoContent();
         }
 
         [HttpDelete()]
@@ -70,6 +79,11 @@ namespace MarcenariaApi.Controllers
             _dbContext.Remove(projetoTemp);
             await _dbContext.SaveChangesAsync();
             return Ok();
+        }
+
+        private bool ProjetoExists(int id)
+        {
+            return _dbContext.Projetos.Any(e => e.id == id);
         }
     }
 }
