@@ -31,12 +31,12 @@ cadastrar(funcionario: Funcionario): Observable<any> {
 }
 
 atualizar(funcionario: Funcionario): Observable<any> {
-  const url = `${this.apiUrl}/atualizar`;
+  const url = `${this.apiUrl}/atualizar/${funcionario.id}`;
   return this.http.put<Funcionario>(url, funcionario, httpOptions);
 }
 
 excluir(id: number): Observable<any> {
-  const url = `${this.apiUrl}/buscar/${id}`;
+  const url = `${this.apiUrl}/deletar/${id}`;
   return this.http.delete<string>(url, httpOptions);
 }
 
