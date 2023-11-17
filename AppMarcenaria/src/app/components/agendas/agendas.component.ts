@@ -14,7 +14,9 @@ export class AgendasComponent implements OnInit {
   tituloFormulario: string = '';
   minhaAgenda: any;
   agenda: any;
-  agendasList: Agenda[] = [];  // Adicione esta propriedade
+  agendasList: Agenda[] = [];
+
+  agendaSelecionada: Agenda | null = null;
 
   constructor(private formBuilder: FormBuilder, private agendasService: AgendasService) { }
 
@@ -58,45 +60,21 @@ export class AgendasComponent implements OnInit {
       },
       (error) => {
         console.error('Erro ao listar agendas:', error);
-        // Trate o erro conforme necessário
       }
     );
   }
 
-
-  atualizarAgendas(): void {
-    // Lógica para atualizar agendas
-    // Exemplo: Atualizar todas as agendas selecionadas na lista
-    for (const agenda of this.agendasList) {
-      this.agendasService.atualizar(agenda).subscribe(
-        (_result) => {
-          console.log('Agenda atualizada com sucesso:', agenda);
-        },
-        (error) => {
-          console.error('Erro ao atualizar agenda:', error);
-          // Trate o erro conforme necessário
-        }
-      );
-    }
-    this.listarAgendas(); // Atualiza a lista após as atualizações
+  editarAgenda(agenda: Agenda): void {
+    this.agendaSelecionada = agenda;
+    // Crie um novo FormGroup para o formulário de edição
+    this.formulario = this.formBuilder.group({
+      id: [agenda.id],
+      descricao: [agenda.descricao],
+      data: [agenda.dataString],
+      tipo: [agenda.tipo],
+      funcionarioId: [agenda.funcionarioId],
+    });
   }
-
-  // deletarAgendas(): void {
-  //   // Lógica para deletar agendas
-  //   // Exemplo: Deletar todas as agendas selecionadas na lista
-  //   for (const agenda of this.agendasList) {
-  //     this.agendasService.excluir(agenda.id).subscribe(
-  //       (_result) => {
-  //         console.log('Agenda deletada com sucesso:', agenda);
-  //       },
-  //       (error) => {
-  //         console.error('Erro ao deletar agenda:', error);
-  //         // Trate o erro conforme necessário
-  //       }
-  //     );
-  //   }
-  //   this.listarAgendas(); // Atualiza a lista após as exclusões
-  // }
 
   deletarAgenda(id: number): void {
     // Confirmar a exclusão antes de prosseguir
@@ -112,20 +90,9 @@ export class AgendasComponent implements OnInit {
         },
         (error) => {
           console.error('Erro ao deletar agenda:', error);
-          // Trate o erro conforme necessário
         }
       );
     }
   }
-
-
-
-
-
-
-
-
-
-
 
 }
