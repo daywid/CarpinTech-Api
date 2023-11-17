@@ -98,6 +98,11 @@ export class AgendasComponent implements OnInit {
     });
   }
 
+  voltarParaLista(): void {
+    this.formularioEdit.reset(); // Limpa o formulário de edição
+    this.agendaSelecionada = null; // Remove a agenda selecionada
+  }
+
   deletarAgenda(id: number): void {
     // Confirmar a exclusão antes de prosseguir
     const confirmarExclusao = confirm('Tem certeza que deseja excluir esta agenda?');
