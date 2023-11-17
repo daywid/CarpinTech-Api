@@ -8,26 +8,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ModalModule} from 'ngx-bootstrap/modal';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { AgendasService } from './agendas.service';
+import { AgendasService } from './models/agenda/agendas.service';
 import { AgendasComponent } from './components/agendas/agendas.component';
-import { FuncionariosService } from './funcionarios.service';
+import { FuncionariosService } from './models/funcionario/funcionarios.service';
 import { FuncionariosComponent } from './components/funcionarios/funcionarios.component';
 
-
+//Angular Material Imports
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
-
-
-
-// import { MarcasService } from './marcas.service';
-// import { MarcasComponent } from './components/marcas/marcas.component';
-// import { ModelosService } from './modelos.service';
-// import { ModelosComponent } from './components/modelos/modelos.component';
-// import { ClientesService } from './clientes.service';
-// import { ClientesComponent } from './components/clientes/clientes.component';
-// import { CarrosService } from './carros.service';
-// import { CarrosComponent } from './components/carros/carros.component';
 
 @NgModule({
   declarations: [

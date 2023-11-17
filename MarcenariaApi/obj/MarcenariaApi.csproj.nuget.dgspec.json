@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\Documents\\GitHub\\Angular-Studies\\MarcenariaApi\\MarcenariaApi.csproj": {}
+    "C:\\Users\\Usuario\\Documents\\GitHub\\CarpinTech-Api\\MarcenariaApi\\MarcenariaApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\Documents\\GitHub\\Angular-Studies\\MarcenariaApi\\MarcenariaApi.csproj": {
+    "C:\\Users\\Usuario\\Documents\\GitHub\\CarpinTech-Api\\MarcenariaApi\\MarcenariaApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Documents\\GitHub\\Angular-Studies\\MarcenariaApi\\MarcenariaApi.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\Documents\\GitHub\\CarpinTech-Api\\MarcenariaApi\\MarcenariaApi.csproj",
         "projectName": "MarcenariaApi",
-        "projectPath": "C:\\Users\\Usuario\\Documents\\GitHub\\Angular-Studies\\MarcenariaApi\\MarcenariaApi.csproj",
+        "projectPath": "C:\\Users\\Usuario\\Documents\\GitHub\\CarpinTech-Api\\MarcenariaApi\\MarcenariaApi.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Documents\\GitHub\\Angular-Studies\\MarcenariaApi\\obj\\",
+        "outputPath": "C:\\Users\\Usuario\\Documents\\GitHub\\CarpinTech-Api\\MarcenariaApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"

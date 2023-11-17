@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LnC6847SOGANUBhqwh0nImWz/CEqeFId6ABK9UN5vwvbEq19nHi1FvZhIpE+E3X+fssXJ5rHsWWe4ZVHeEdXnw==",
+  "dgSpecHash": "+BYAZjKdAwOOYCdXnBWoWhl9NrnTjA/H/uj9Kel07Tjp9C4zDHMwOgkXdwEQA5nrrzK4t9Y1B0dXAUCu8M2SvQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\Documents\\GitHub\\Angular-Studies\\MarcenariaApi\\MarcenariaApi.csproj",
+  "projectFilePath": "C:\\Users\\Usuario\\Documents\\GitHub\\CarpinTech-Api\\MarcenariaApi\\MarcenariaApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.11\\microsoft.aspnetcore.openapi.7.0.11.nupkg.sha512",

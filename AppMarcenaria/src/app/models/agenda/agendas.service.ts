@@ -30,12 +30,12 @@ cadastrar(agenda: Agenda): Observable<any> {
 }
 
 atualizar(agenda: Agenda): Observable<any> {
-  const url = `${this.apiUrl}/atualizar`;
+  const url = `${this.apiUrl}/atualizar/${agenda.id}`;
   return this.http.put<Agenda>(url, agenda, httpOptions);
 }
 
 excluir(id: number): Observable<any> {
-  const url = `${this.apiUrl}/buscar/${id}`;
+  const url = `${this.apiUrl}/deletar/${id}`;
   return this.http.delete<string>(url, httpOptions);
 }
 

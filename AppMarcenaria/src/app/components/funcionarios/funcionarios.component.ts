@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Observer } from 'rxjs';
-import { Funcionario } from 'src/app/Funcionario';
-import { FuncionariosService } from 'src/app/funcionarios.service';
+import { Funcionario } from 'src/app/models/funcionario/Funcionario';
+import { FuncionariosService } from 'src/app/models/funcionario/funcionarios.service';
 
 @Component({
   selector: 'app-funcionarios',
