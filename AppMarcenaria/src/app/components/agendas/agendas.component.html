@@ -74,7 +74,7 @@
           <div>
             <strong>Descrição da agenda:</strong> {{ agenda.descricao }}
           </div>
-          <div><strong>Data da agenda:</strong> {{ agenda.dataString }}</div>
+          <div><strong>Data da agenda:</strong> {{ agenda.data }}</div>
           <div>
             <strong>Id do funcionário:</strong> {{ agenda.funcionarioId }}
           </div>
@@ -99,8 +99,7 @@
       <!-- Formulário de Edição -->
       <div *ngIf="agendaSelecionada">
         <h6>Editar Agenda</h6>
-        <form [formGroup]="formulario" (ngSubmit)="enviarFormulario()">
-
+        <form [formGroup]="formularioEdit" (ngSubmit)="enviarFormularioEdit()">
           <!-- Campos de edição -->
 
           <div class="form-group">

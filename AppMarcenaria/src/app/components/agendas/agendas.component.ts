@@ -11,6 +11,7 @@ import { Observer } from 'rxjs';
 })
 export class AgendasComponent implements OnInit {
   formulario!: FormGroup;
+  formularioEdit !: FormGroup;
   tituloFormulario: string = '';
   minhaAgenda: any;
   agenda: any;
@@ -52,10 +53,31 @@ export class AgendasComponent implements OnInit {
     }
   }
 
+  enviarFormularioEdit(): void {
+    const agenda: Agenda = this.formularioEdit.value;
+    const observer: Observer<Agenda> = {
+      next(_result): void {
+        alert('Agenda atualizda com sucesso.');
+      },
+      error(_error): void {
+        alert('Erro ao atualizar!');
+      },
+      complete(): void {
+      },
+    };
+
+    if (agenda.id && !isNaN(Number(agenda.id))) {
+      this.agendasService.atualizar(agenda).subscribe(observer);
+      this.listarAgendas();
+    } else {
+      this.agendasService.cadastrar(agenda).subscribe(observer);
+      this.listarAgendas();
+    }
+  }
+
   listarAgendas(): void {
     this.agendasService.listar().subscribe(
       (agendas) => {
-        console.log('Agendas listadas com sucesso:', agendas);
         this.agendasList = agendas;
       },
       (error) => {
@@ -67,10 +89,10 @@ export class AgendasComponent implements OnInit {
   editarAgenda(agenda: Agenda): void {
     this.agendaSelecionada = agenda;
     // Crie um novo FormGroup para o formulário de edição
-    this.formulario = this.formBuilder.group({
+    this.formularioEdit = this.formBuilder.group({
       id: [agenda.id],
       descricao: [agenda.descricao],
-      data: [agenda.dataString],
+      data: [agenda.data],
       tipo: [agenda.tipo],
       funcionarioId: [agenda.funcionarioId],
     });
