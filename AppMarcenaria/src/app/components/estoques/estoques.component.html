@@ -7,7 +7,7 @@
          Cadastro de Estoque
          <h6>{{ tituloFormulario }}</h6>
         <form [formGroup]="formulario" (ngSubmit)="enviarFormulario()">
-  
+
           <div class="form-group">
             <label>Quantidade</label>
             <input
@@ -16,7 +16,7 @@
               formControlName="quantidade"
             />
           </div>
-  
+
           <div class="container">
             <div class="row">
               <div class="col-6">
@@ -31,14 +31,14 @@
           </div>
         </form>
       </div>
-  
+
       <!-- Novo Container -->
       <div class="col-6 border border-light rounded p-5 shadow">
         <h6>Operações com Estoques</h6>
         <button class="btn btn-sm btn-primary" (click)="listarEstoques()">
           Listar Estoques
         </button>
-  
+
         <div *ngFor="let estoque of estoquesList">
           <div class="estoque-item">
             <div>
@@ -62,13 +62,13 @@
           <hr />
           <!-- Adiciona uma linha horizontal entre cada estoque -->
         </div>
-  
+
         <!-- Formulário de Edição -->
         <div *ngIf="estoqueSelecionado">
           <h6>Editar Estoque</h6>
           <form [formGroup]="formularioEdit" (ngSubmit)="enviarFormulario()">
             <!-- Campos de edição -->
-  
+
             <div class="form-group">
               <label>Id da Estoque</label>
               <input
@@ -78,7 +78,7 @@
                 readonly
               />
             </div>
-  
+
             <div class="form-group">
               <label>Quantidade</label>
               <input
@@ -87,13 +87,13 @@
                 formControlName="quantidade"
               />
             </div>
-  
+
             <!-- Botão de Salvar Edição -->
-            <button type="button" class="btn btn-sm btn-success" 
+            <button type="button" class="btn btn-sm btn-success"
             (click)="salvarEdicao()">
               Salvar Edição
             </button>
-  
+
             <!-- Botão de Voltar -->
             <button
               type="button"
@@ -107,4 +107,3 @@
       </div>
     </div>
   </div>
-  
