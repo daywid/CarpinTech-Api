@@ -21,7 +21,7 @@ namespace MarcenariaApi.Controllers
         {
             if (_dbContext is null) return NotFound();
             if (_dbContext.Tarefas is null) return NotFound();
-            return await _dbContext.Tarefas.Include(e => e.Materiais).ToListAsync();
+            return await _dbContext.Tarefas.ToListAsync();
         }
 
         [HttpGet]
@@ -30,7 +30,7 @@ namespace MarcenariaApi.Controllers
         {
             if (_dbContext is null) return NotFound();
             if (_dbContext.Tarefas is null) return NotFound();
-            var tarefaTemp = await _dbContext.Tarefas.Include(e => e.Materiais).FirstOrDefaultAsync(e => e.id == id);
+            var tarefaTemp = await _dbContext.Tarefas.FindAsync(id);
             if (tarefaTemp is null) return NotFound();
             return tarefaTemp;
         }
@@ -55,23 +55,18 @@ namespace MarcenariaApi.Controllers
         [Route("atualizar/{id}")]
         public async Task<ActionResult> Alterar(int id, Tarefa tarefa)
         {
-            _dbContext.Entry(tarefa).State = EntityState.Modified;
-
-            try
-            {
-                await _dbContext.SaveChangesAsync();
-                return Ok();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!TarefaExists(id))
-                {
-                    return NotFound();
-                }
-                throw;
-            }
-
-            return NoContent();
+            if (_dbContext is null) return BadRequest();
+            if (_dbContext.Tarefas is null) return BadRequest();
+            var tarefaTemp = await _dbContext.Tarefas.FindAsync(id);
+            if (tarefaTemp is null) return BadRequest();
+            tarefaTemp.nome = tarefa.nome;
+            tarefaTemp.desc = tarefa.desc;
+            tarefaTemp.status = tarefa.status;
+            tarefaTemp.dataInicio = tarefa.dataInicio;
+            tarefaTemp.dataFinalizacao = tarefa.dataFinalizacao;
+            tarefaTemp.ProjetoId = tarefa.ProjetoId;
+            await _dbContext.SaveChangesAsync();
+            return Ok();
         }
 
         [HttpDelete()]

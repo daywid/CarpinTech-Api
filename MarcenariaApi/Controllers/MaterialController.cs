@@ -41,45 +41,29 @@ namespace MarcenariaApi.Controllers
         {
             if (_dbContext is null) return NotFound();
             if (_dbContext.Materiais is null) return NotFound();
-            if (_dbContext.Projetos is null) return NotFound("Não há tarefas cadastradas!");
             if (_dbContext.Estoques is null) return NotFound("Não há estoques cadastrados!");
 
-            var tarefaTemp = await _dbContext.Tarefas.FindAsync(material.tarefaId);
-            if (tarefaTemp is null) return NotFound("Tarefa não encontrado!");
-
-            var estoqueTemp = await _dbContext.Tarefas.FindAsync(material.estoqueId);
+            var estoqueTemp = await _dbContext.Estoques.FindAsync(material.estoqueId);
             if (estoqueTemp is null) return NotFound("Estoque não encontrado!");
 
             await _dbContext.AddAsync(material);
             await _dbContext.SaveChangesAsync();
-            return Created("Tarefa cadastrada com sucesso!", material);
+            return Created("Material cadastrado com sucesso!", material);
         }
 
         [HttpPut()]
         [Route("atualizar/{id}")]
-        public async Task<ActionResult> Alterar(int id,  Material material)
+        public async Task<ActionResult> Alterar(int id, Material material)
         {
-
-            _dbContext.Entry(material).State = EntityState.Modified;
-
-            try
-            {
-                await _dbContext.SaveChangesAsync();
-                return Ok();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!MaterialExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
+            if (_dbContext is null) return BadRequest();
+            if (_dbContext.Materiais is null) return BadRequest();
+            var materialTemp = await _dbContext.Materiais.FindAsync(id);
+            if (materialTemp is null) return BadRequest();
+            materialTemp.nome = material.nome;
+            materialTemp.custo = material.custo;
+            materialTemp.estoqueId = material.estoqueId;
+            await _dbContext.SaveChangesAsync();
+            return Ok();
         }
 
         [HttpDelete()]

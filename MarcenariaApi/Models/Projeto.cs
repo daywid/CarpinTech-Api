@@ -7,7 +7,7 @@ namespace MarcenariaApi.Models
     public class Projeto
     {
         [Key]
-        public int id { get; set; }
+        public int? id { get; set; }
         public string? nome { get; set; }
         public string? desc { get; set; }
         public Double valor { get; set; }
@@ -17,7 +17,7 @@ namespace MarcenariaApi.Models
         public DateTime dataCadastro { get; set;  }
         public DateTime dataPrazo { get; set; }
 
-        public DateTime dataFinalizacao { get; set; }
+        public DateTime? dataFinalizacao { get; set; }
 
     }
 }

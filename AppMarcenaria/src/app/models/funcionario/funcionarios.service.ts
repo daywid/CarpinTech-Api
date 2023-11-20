@@ -12,7 +12,7 @@ headers: new HttpHeaders({
 providedIn: 'root'
 })
 export class FuncionariosService {
-apiUrl = 'http://localhost:5000/api/Funcionario';
+apiUrl = 'https://localhost:44320/api/Funcionario';
 constructor(private http: HttpClient) { }
 
 listar(): Observable<Funcionario[]> {

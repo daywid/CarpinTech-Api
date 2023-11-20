@@ -21,7 +21,7 @@ namespace MarcenariaApi.Controllers
         {
             if (_dbContext is null) return NotFound();
             if (_dbContext.Projetos is null) return NotFound();
-            return await _dbContext.Projetos.Include(e => e.Tarefas).ThenInclude(t => t.Materiais).ToListAsync();
+            return await _dbContext.Projetos.Include(e => e.Tarefas).ToListAsync();
         }
 
         [HttpGet]
@@ -30,7 +30,7 @@ namespace MarcenariaApi.Controllers
         {
             if (_dbContext is null) return NotFound();
             if (_dbContext.Projetos is null) return NotFound();
-            var projetoTemp = await _dbContext.Projetos.Include(e => e.Tarefas).ThenInclude(t => t.Materiais).FirstOrDefaultAsync(e => e.id == id);
+            var projetoTemp = await _dbContext.Projetos.Include(e => e.Tarefas).FirstOrDefaultAsync(e => e.id == id);
             if (projetoTemp is null) return NotFound();
             return projetoTemp;
         }
@@ -48,24 +48,21 @@ namespace MarcenariaApi.Controllers
 
         [HttpPut()]
         [Route("atualizar/{id}")]
-        public async Task<ActionResult> Alterar(int id,  Projeto projeto)
+        public async Task<ActionResult> Alterar(int id,Projeto projeto)
         {
-            _dbContext.Entry(projeto).State = EntityState.Modified;
-            try
-            {
-                await _dbContext.SaveChangesAsync();
-                return Ok();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ProjetoExists(id))
-                {
-                    return NotFound();
-                }
-                throw;
-            }
-
-            return NoContent();
+            if (_dbContext is null) return BadRequest();
+            if (_dbContext.Projetos is null) return BadRequest();
+            var projetoTemp = await _dbContext.Projetos.FindAsync(id);
+            if (projetoTemp is null) return BadRequest();
+            projetoTemp.nome = projeto.nome;
+            projetoTemp.desc = projeto.desc;
+            projetoTemp.valor = projeto.valor;
+            projetoTemp.status = projeto.status;
+            projetoTemp.dataCadastro = projeto.dataCadastro;
+            projetoTemp.dataPrazo = projeto.dataPrazo;
+            projetoTemp.dataFinalizacao = projeto.dataFinalizacao;
+            await _dbContext.SaveChangesAsync();
+            return Ok();
         }
 
         [HttpDelete()]

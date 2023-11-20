@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MarcenariaApi.Migrations
 {
     [DbContext(typeof(MarcenariaDbContext))]
-    [Migration("20231002055536_addMatAndEstoqueTable")]
-    partial class addMatAndEstoqueTable
+    [Migration("20231120144350_updatingMateriaisTarefas")]
+    partial class updatingMateriaisTarefas
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -65,7 +65,7 @@ namespace MarcenariaApi.Migrations
 
             modelBuilder.Entity("MarcenariaApi.Models.Estoque", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int?>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -75,6 +75,29 @@ namespace MarcenariaApi.Migrations
                     b.HasKey("id");
 
                     b.ToTable("Estoques");
+                });
+
+            modelBuilder.Entity("MarcenariaApi.Models.Financeiro", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<decimal>("CustosMateriais")
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal>("DespesasOperacionais")
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal>("PagamentosClientes")
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal>("SalariosFuncionarios")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Financeiros");
                 });
 
             modelBuilder.Entity("MarcenariaApi.Models.Fornecedor", b =>
@@ -117,12 +140,12 @@ namespace MarcenariaApi.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Funcionario");
+                    b.ToTable("Funcionarios");
                 });
 
             modelBuilder.Entity("MarcenariaApi.Models.Material", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int?>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -135,28 +158,23 @@ namespace MarcenariaApi.Migrations
                     b.Property<string>("nome")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("tarefaId")
-                        .HasColumnType("INTEGER");
-
                     b.HasKey("id");
 
                     b.HasIndex("estoqueId");
-
-                    b.HasIndex("tarefaId");
 
                     b.ToTable("Materiais");
                 });
 
             modelBuilder.Entity("MarcenariaApi.Models.Projeto", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int?>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("dataCadastro")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("dataFinalizacao")
+                    b.Property<DateTime?>("dataFinalizacao")
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("dataPrazo")
@@ -179,16 +197,45 @@ namespace MarcenariaApi.Migrations
                     b.ToTable("Projetos");
                 });
 
+            modelBuilder.Entity("MarcenariaApi.Models.Relatorio", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Conteudo")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("DataCriacao")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("FuncionarioId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Titulo")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Relatorios");
+                });
+
             modelBuilder.Entity("MarcenariaApi.Models.Tarefa", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int?>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("ProjetoId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateTime>("dataFinalizacao")
+                    b.Property<DateTime?>("dataFinalizacao")
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("dataInicio")
@@ -217,12 +264,6 @@ namespace MarcenariaApi.Migrations
                         .HasForeignKey("estoqueId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("MarcenariaApi.Models.Tarefa", null)
-                        .WithMany("Materiais")
-                        .HasForeignKey("tarefaId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("MarcenariaApi.Models.Tarefa", b =>
@@ -242,11 +283,6 @@ namespace MarcenariaApi.Migrations
             modelBuilder.Entity("MarcenariaApi.Models.Projeto", b =>
                 {
                     b.Navigation("Tarefas");
-                });
-
-            modelBuilder.Entity("MarcenariaApi.Models.Tarefa", b =>
-                {
-                    b.Navigation("Materiais");
                 });
 #pragma warning restore 612, 618
         }

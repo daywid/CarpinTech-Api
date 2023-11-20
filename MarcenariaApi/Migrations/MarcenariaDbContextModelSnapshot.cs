@@ -60,6 +60,20 @@ namespace MarcenariaApi.Migrations
                     b.ToTable("Clientes");
                 });
 
+            modelBuilder.Entity("MarcenariaApi.Models.Estoque", b =>
+                {
+                    b.Property<int?>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("quantidade")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Estoques");
+                });
+
             modelBuilder.Entity("MarcenariaApi.Models.Financeiro", b =>
                 {
                     b.Property<int>("Id")
@@ -126,6 +140,60 @@ namespace MarcenariaApi.Migrations
                     b.ToTable("Funcionarios");
                 });
 
+            modelBuilder.Entity("MarcenariaApi.Models.Material", b =>
+                {
+                    b.Property<int?>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<double>("custo")
+                        .HasColumnType("REAL");
+
+                    b.Property<int>("estoqueId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("nome")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("estoqueId");
+
+                    b.ToTable("Materiais");
+                });
+
+            modelBuilder.Entity("MarcenariaApi.Models.Projeto", b =>
+                {
+                    b.Property<int?>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("dataCadastro")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("dataFinalizacao")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("dataPrazo")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("desc")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("nome")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("status")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<double>("valor")
+                        .HasColumnType("REAL");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Projetos");
+                });
+
             modelBuilder.Entity("MarcenariaApi.Models.Relatorio", b =>
                 {
                     b.Property<int>("Id")
@@ -153,6 +221,65 @@ namespace MarcenariaApi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Relatorios");
+                });
+
+            modelBuilder.Entity("MarcenariaApi.Models.Tarefa", b =>
+                {
+                    b.Property<int?>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ProjetoId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime?>("dataFinalizacao")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("dataInicio")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("desc")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("nome")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("status")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("ProjetoId");
+
+                    b.ToTable("Tarefas");
+                });
+
+            modelBuilder.Entity("MarcenariaApi.Models.Material", b =>
+                {
+                    b.HasOne("MarcenariaApi.Models.Estoque", null)
+                        .WithMany("materiais")
+                        .HasForeignKey("estoqueId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("MarcenariaApi.Models.Tarefa", b =>
+                {
+                    b.HasOne("MarcenariaApi.Models.Projeto", null)
+                        .WithMany("Tarefas")
+                        .HasForeignKey("ProjetoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("MarcenariaApi.Models.Estoque", b =>
+                {
+                    b.Navigation("materiais");
+                });
+
+            modelBuilder.Entity("MarcenariaApi.Models.Projeto", b =>
+                {
+                    b.Navigation("Tarefas");
                 });
 #pragma warning restore 612, 618
         }
