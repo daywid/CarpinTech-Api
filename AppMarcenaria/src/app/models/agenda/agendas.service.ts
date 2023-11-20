@@ -5,14 +5,13 @@ import { Agenda } from './Agenda';
 const httpOptions = {
 headers: new HttpHeaders({
 'Content-Type' : 'application/json',
-'Access-Control-Allow-Origin': 'http://localhost:4200'
 })
 }
 @Injectable({
 providedIn: 'root'
 })
 export class AgendasService {
-apiUrl = 'https://localhost:44320/api/Agenda';
+apiUrl = 'http://localhost:5000/api/Agenda';
 constructor(private http: HttpClient) { }
 
 listar(): Observable<Agenda[]> {
