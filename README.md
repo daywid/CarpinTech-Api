@@ -95,3 +95,19 @@ Aqui está um diagrama de classes UML que representa a estrutura das classes do 
 ## Conclusão
 
 A MarcenariaAPI é uma aplicação de gerenciamento poderosa e flexível que atende às necessidades da Carpintech. Ela proporciona maior controle sobre projetos, materiais, funcionários, agendas e finanças. Com o uso da documentação da API Swagger, a interação com a API é facilitada. O projeto foi desenvolvido com sucesso, atendendo aos requisitos estabelecidos.
+
+######################
+
+For studies:
+
+To Do
+
+- Change the backend to Java Spring.
+- Redo some Service Logic.
+- Create tests and validations for every class.
+- Improve the front-end.
+- Deploy it.
+
+
+
+
