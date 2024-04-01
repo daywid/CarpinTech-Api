@@ -20,19 +20,22 @@
  */
 package com.api.carpintech.models;
 
-import org.hibernate.annotations.GenericGenerator;
-import java.util.UUID;
+import jakarta.persistence.Id;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Table;
+import org.hibernate.annotations.GenericGenerator;
+import java.util.*;
+import java.util.UUID;
 
 @Entity
 @Table(name = "cliente")
 public class Cliente {
 
+    @Id
     @GeneratedValue(generator = "uuid2")
-    @GenericGenerator(name = "uuid2", strategy = "")
+    @GenericGenerator(name = "uuid2", strategy = "uuid2")
     @Column(name = "id", nullable = false, columnDefinition = "BINARY(16)")
     private UUID id;
     
@@ -45,7 +48,14 @@ public class Cliente {
     @Column(name = "endereco", nullable = false, length = 100)
     private String endereco;
     
-    
+    public Cliente(String nome, String telefone, String endereco) {
+        this.nome = nome;
+        this.telefone = telefone;
+        this.endereco = endereco;
+    }
+
+    public Cliente() {}
+
     public String getNome() {
         return nome;
     }

@@ -17,7 +17,7 @@
 package com.api.carpintech.models;
 
 import org.hibernate.annotations.GenericGenerator;
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.Id;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

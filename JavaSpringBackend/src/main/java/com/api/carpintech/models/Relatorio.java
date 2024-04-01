@@ -1,17 +1,11 @@
 package com.api.carpintech.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import com.api.carpintech.models.enums.RelatorioStatus;
+import jakarta.persistence.*;
 import net.sf.jsqlparser.expression.DateTimeLiteralExpression.DateTime;
+import org.hibernate.annotations.GenericGenerator;
 
 import java.util.UUID;
-
-import org.hibernate.annotations.GenericGenerator;
-import com.api.carpintech.models.enums.RelatorioStatus;
 
 @Entity
 @Table(name = "relatorio")
@@ -30,7 +24,7 @@ public class Relatorio {
     private DateTime dataCriacao;
     
     @ManyToOne
-    @Column(name = "funcionario_id", nullable = false)
+    @JoinColumn(name = "funcionario_id", nullable = false)
     private Funcionario funcionario;
     
     @Column(name = "status", nullable = false)

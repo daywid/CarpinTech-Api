@@ -25,13 +25,9 @@
 
 package com.api.carpintech.models;
 
+import jakarta.persistence.*;
 import org.hibernate.annotations.GenericGenerator;
-import org.springframework.data.annotation.Id;
 import java.util.UUID;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "funcionario")

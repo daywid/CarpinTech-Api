@@ -6,12 +6,15 @@ public class FinanceiroService {
     
     public double calcularLucro(Financeiro f)
     {
-        if (f.getCustosMateriais() + f.getSalariosFuncionarios() + f.getDespesasOperacionais() > f.getPagamentosClientes())
+        if ((f.getCustosMateriais() + f.getSalariosFuncionarios() + f.getDespesasOperacionais()) > f.getPagamentosClientes())
         {
             return 0;
         }
+        else
+        {
+            return f.getPagamentosClientes() - (f.getCustosMateriais() + f.getSalariosFuncionarios() + f.getDespesasOperacionais());
+        }
 
-        return f.getPagamentosClientes() - (f.getCustosMateriais() + f.getSalariosFuncionarios() + f.getDespesasOperacionais());
     }
 
     // Método para calcular o Balanço

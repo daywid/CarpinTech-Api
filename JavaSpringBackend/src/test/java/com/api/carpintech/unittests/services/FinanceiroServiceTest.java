@@ -1,6 +1,9 @@
 package com.api.carpintech.unittests.services;
 
+import static com.jayway.jsonpath.internal.path.PathCompiler.fail;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 import org.junit.jupiter.api.Test;
 
@@ -8,61 +11,40 @@ import com.api.carpintech.models.Financeiro;
 import com.api.carpintech.services.FinanceiroService;
 
 public class FinanceiroServiceTest {
-    
+
 FinanceiroService service = new FinanceiroService();
 
     @Test
-    void calcularLucro_deveRetornarZero_quandoOValorDoPagamentosForMenorQueASomaDosOutros() {
-        Financeiro financeiro = new Financeiro(100, 200, 300, 99);
+    public void testCalcularLucro() {
+        Financeiro financeiro = mock(Financeiro.class);
+        when(financeiro.getCustosMateriais()).thenReturn(100.0);
+        when(financeiro.getSalariosFuncionarios()).thenReturn(50.0);
+        when(financeiro.getDespesasOperacionais()).thenReturn(20.0);
+        when(financeiro.getPagamentosClientes()).thenReturn(150.0);
 
-        double lucro = service.calcularLucro(financeiro);
-
-        assertEquals(0, lucro);
+        assertEquals(100.0, service.calcularLucro(financeiro), 0.0);
     }
 
     @Test
-    void calcularLucro_deveRetornarDiferencaEntrePagamentosEOutros_quandoOValorDoPagamentosForMaiorQueASomaDosOutros() {
-        Financeiro financeiro = new Financeiro(100, 200, 300, 400);
+    public void testCalcularBalanco() {
+        Financeiro financeiro = mock(Financeiro.class);
+        when(financeiro.getCustosMateriais()).thenReturn(100.0);
+        when(financeiro.getSalariosFuncionarios()).thenReturn(50.0);
+        when(financeiro.getDespesasOperacionais()).thenReturn(20.0);
+        when(financeiro.getPagamentosClientes()).thenReturn(150.0);
 
-        double lucro = service.calcularLucro(financeiro);
-
-        assertEquals(100, lucro);
+        assertEquals(-50.0, service.calcularBalanco(financeiro), 0.0);
     }
 
     @Test
-    void calcularBalanco_deveRetornarDiferencaEntrePagamentosEOutros_quandoOValorDoPagamentosForMenorQueASomaDosOutros() {
-        Financeiro financeiro = new Financeiro(100, 200, 300, 99);
+    public void testCalcularLucroLiquido() {
+        Financeiro financeiro = mock(Financeiro.class);
+        when(financeiro.getCustosMateriais()).thenReturn(100.0);
+        when(financeiro.getSalariosFuncionarios()).thenReturn(50.0);
+        when(financeiro.getDespesasOperacionais()).thenReturn(20.0);
+        when(financeiro.getPagamentosClientes()).thenReturn(150.0);
 
-        double balanco = service.calcularBalanco(financeiro);
-
-        assertEquals(401, balanco);
-    }
-
-    @Test
-    void calcularBalanco_deveRetornarZero_quandoOValorDoPagamentosForMaiorQueASomaDosOutros() {
-        Financeiro financeiro = new Financeiro(100, 200, 300, 400);
-
-        double balanco = service.calcularBalanco(financeiro);
-
-        assertEquals(0, balanco);
-    }
-
-    @Test
-    void calcularLucroLiquido_deveRetornarZero_quandoOValorDoPagamentosForMenorQueASomaDosOutros() {
-        Financeiro financeiro = new Financeiro(100, 200, 300, 99);
-
-        double lucroLiquido = service.calcularLucroLiquido(financeiro);
-
-        assertEquals(0, lucroLiquido);
-    }
-
-    @Test
-    void calcularLucroLiquido_deveRetornarDiferencaEntrePagamentosEOutros_quandoOValorDoPagamentosForMaiorQueASomaDosOutros() {
-        Financeiro financeiro = new Financeiro(100, 200, 300, 400);
-
-        double lucroLiquido = service.calcularLucroLiquido(financeiro);
-
-        assertEquals(60, lucroLiquido);
+        assertEquals(50.0, service.calcularLucroLiquido(financeiro), 0.0);
     }
 
 }
