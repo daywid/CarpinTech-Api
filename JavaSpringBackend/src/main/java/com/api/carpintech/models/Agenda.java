@@ -18,7 +18,7 @@ package com.api.carpintech.models;
 
 import org.hibernate.annotations.GenericGenerator;
 import org.springframework.data.annotation.Id;
-import java.util.UUID;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -32,8 +32,8 @@ public class Agenda {
     
     @Id
     @GeneratedValue(generator = "uuid2")
-    @GenericGenerator(name = "uuid2")
-    @Column(name = "id", nullable = false, columnDefinition = "VARCHAR(255)")
+    @GenericGenerator(name = "uuid2", strategy = "uuid2")
+    @Column(name = "id", nullable = false, columnDefinition = "BINARY(16)")
     private UUID id;
     private String descricao;
     /**

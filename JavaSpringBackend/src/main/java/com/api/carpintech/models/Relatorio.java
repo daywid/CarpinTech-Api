@@ -19,8 +19,8 @@ public class Relatorio {
     
     @Id
     @GeneratedValue(generator = "uuid2")
-    @GenericGenerator(name = "uuid2")
-    @Column(name = "id", nullable = false, columnDefinition = "VARCHAR(255)")
+    @GenericGenerator(name = "uuid2", strategy = "uuid2")
+    @Column(name = "id", nullable = false, columnDefinition = "BINARY(16)")
     private UUID id;
 
     @Column(name = "conteudo", nullable = false, length = 100)
