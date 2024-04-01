@@ -20,19 +20,23 @@ namespace MarcenariaApi.Models
         // Método para calcular o Lucro
         public decimal CalcularLucro()
         {
+            if (CustosMateriais + SalariosFuncionarios + DespesasOperacionais > PagamentosClientes)
+            {
+                return 0;
+            }
             return PagamentosClientes - (CustosMateriais + SalariosFuncionarios + DespesasOperacionais);
         }
 
         // Método para calcular o Balanço
         public decimal CalcularBalanco()
         {
-            return PagamentosClientes - (CustosMateriais + SalariosFuncionarios + DespesasOperacionais);
+            return CustosMateriais + SalariosFuncionarios + DespesasOperacionais - PagamentosClientes;
         }
 
         // Método para calcular o Lucro Líquido
         public decimal CalcularLucroLiquido()
         {
-            return PagamentosClientes - (CustosMateriais + SalariosFuncionarios + DespesasOperacionais);
+            return CalcularLucro() - CalcularBalanco();
         }
 
 
