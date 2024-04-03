@@ -1,50 +1,52 @@
 package com.api.carpintech.unittests.services;
 
-import static com.jayway.jsonpath.internal.path.PathCompiler.fail;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
-
-import org.junit.jupiter.api.Test;
-
 import com.api.carpintech.models.Financeiro;
 import com.api.carpintech.services.FinanceiroService;
+import org.junit.jupiter.api.Test;
 
-public class FinanceiroServiceTest {
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-FinanceiroService service = new FinanceiroService();
+public class FinanceiroServiceTest
+{
 
     @Test
-    public void testCalcularLucro() {
-        Financeiro financeiro = mock(Financeiro.class);
-        when(financeiro.getCustosMateriais()).thenReturn(100.0);
-        when(financeiro.getSalariosFuncionarios()).thenReturn(50.0);
-        when(financeiro.getDespesasOperacionais()).thenReturn(20.0);
-        when(financeiro.getPagamentosClientes()).thenReturn(150.0);
-
-        assertEquals(100.0, service.calcularLucro(financeiro), 0.0);
+    void testCalcularLucro()
+    {
+        Financeiro f = new Financeiro(1000, 500, 300, 200);
+        FinanceiroService service = new FinanceiroService();
+        double expected = 1000 - (500 + 300 + 200);
+        double actual = service.calcularLucro(f);
+        assertEquals(expected, actual);
     }
 
     @Test
-    public void testCalcularBalanco() {
-        Financeiro financeiro = mock(Financeiro.class);
-        when(financeiro.getCustosMateriais()).thenReturn(100.0);
-        when(financeiro.getSalariosFuncionarios()).thenReturn(50.0);
-        when(financeiro.getDespesasOperacionais()).thenReturn(20.0);
-        when(financeiro.getPagamentosClientes()).thenReturn(150.0);
-
-        assertEquals(-50.0, service.calcularBalanco(financeiro), 0.0);
+    void testCalcularLucroWhenCustosOperacionaisGreaterThanReceitaOperacional()
+    {
+        Financeiro f = new Financeiro(500, 600, 300, 200);
+        FinanceiroService service = new FinanceiroService();
+        double expected = 0;
+        double actual = service.calcularLucro(f);
+        assertEquals(expected, actual);
     }
 
     @Test
-    public void testCalcularLucroLiquido() {
-        Financeiro financeiro = mock(Financeiro.class);
-        when(financeiro.getCustosMateriais()).thenReturn(100.0);
-        when(financeiro.getSalariosFuncionarios()).thenReturn(50.0);
-        when(financeiro.getDespesasOperacionais()).thenReturn(20.0);
-        when(financeiro.getPagamentosClientes()).thenReturn(150.0);
+    void testCalcularLucroLiquidoWhenCustosOperacionaisGreaterThanReceitaOperacional()
+    {
+        Financeiro f = new Financeiro(500, 600, 300, 200);
+        FinanceiroService service = new FinanceiroService();
+        Double expected = 0.0; // Profit is zero
+        Double actual = service.calcularLucroLiquido(f);
+        assertEquals(expected, actual);
+    }
 
-        assertEquals(50.0, service.calcularLucroLiquido(financeiro), 0.0);
+    @Test
+    void testCalcularLucroLiquido()
+    {
+        Financeiro f = new Financeiro(1000, 500, 300, 200);
+        FinanceiroService service = new FinanceiroService();
+        Double expected = (1000 - (500 + 300 + 200)) * 0.85; // 15% taxes
+        Double actual = service.calcularLucroLiquido(f);
+        assertEquals(expected, actual);
     }
 
 }
