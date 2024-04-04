@@ -29,7 +29,7 @@ import java.util.*;
 @Entity
 @Table(name = "agenda")
 public class Agenda {
-    
+
     @Id
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name = "uuid2", strategy = "uuid2")
@@ -40,7 +40,7 @@ public class Agenda {
      * Test with Calendar from java util, 
      * Joda Time is an option too.
     */
-    private Calendar data;
+    private Calendar date;
     private String tipo;
 
     @ManyToOne
@@ -65,19 +65,30 @@ public class Agenda {
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
-    public Calendar getData() {
-        return data;
-    }
-    public void setData(Calendar data) {
-        this.data = data;
-    }
     public Funcionario getFuncionario() {
         return funcionario;
     }
     public void setFuncionario(Funcionario funcionario) {
         this.funcionario = funcionario;
     }
-    
-    
 
+    public Calendar getDate() {
+        return date;
+    }
+
+    public void setDate(Calendar date) {
+        this.date = date;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Agenda agenda)) return false;
+        return Objects.equals(getId(), agenda.getId()) && Objects.equals(getDescricao(), agenda.getDescricao()) && Objects.equals(getDate(), agenda.getDate()) && Objects.equals(getTipo(), agenda.getTipo()) && Objects.equals(getFuncionario(), agenda.getFuncionario());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getDescricao(), getDate(), getTipo(), getFuncionario());
+    }
 }

@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CarpintechApplication {
+public class Startup {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CarpintechApplication.class, args);
+		SpringApplication.run(Startup.class, args);
 	}
 
 }
